@@ -232,8 +232,30 @@ div > p {
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="menu-item">หน้าแรก</a></li>
+            <li><a href="#" class="menu-item"id="active">สินค้า</a></li>
+            <li><a href="#" class="menu-item">เกี่ยวกับเรา</a></li>
+            <li><a href="#" class="menu-item">ติดต่อ</a></li>
+        </ul>
+    </nav>
+
+
+</body>
+</html>
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/581fc18d-8503-4cd0-ab06-8a0c462a29e0)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 
