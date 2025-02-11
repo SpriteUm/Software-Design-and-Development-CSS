@@ -252,6 +252,44 @@ div > p {
 
 </body>
 </html>
+
+
+styles.css
+nav {
+    background-color: #ff660098;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav > ul > li {
+    margin: 2 10px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    padding: 8px 30px;
+}
+
+.menu-item:hover {
+    background-color: #ffffff1e;
+    border-radius: 3px;
+}
+
+#active {
+    background-color: #007bff81;
+    border-radius: 3px;
+}
+
+body {
+    background-color: #fcd793; 
+}
 [วางโค้ดที่นี่]
 ```
 ![image](https://github.com/user-attachments/assets/581fc18d-8503-4cd0-ab06-8a0c462a29e0)
