@@ -360,8 +360,169 @@ background-size: cover;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleslab2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 id="product1"></h2>
+                <p class="product-price">฿250</p>
+                <p class="product-description">
+                ปรัชญาความสุขไม่มีวันหมดจากหมู่บ้านฯ <br>
+                ผู้เขียน: ฮิซุย โคทาโร่, โซเก็น <br>
+                สำนักพิมพ์: วีเลิร์น (WeLearn) <br>
+                หมวดหมู่: จิตวิทยา การพัฒนาตัวเอง , การพัฒนาตัวเอง how to             
+                <p>
+             
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+
+        <div class="product-card ">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 id="product2"></h2>
+                <p class="product-price">฿270</p>
+                <p class="product-description">
+                    นิสัยของเศรษฐี พิมพ์ 2 <br>
+                    ผู้เขียน: ดีน กราซิโอซี <br>
+                    สำนักพิมพ์: วารา <br>
+                    หมวดหมู่: จิตวิทยา การพัฒนาตัวเอง , การพัฒนาตัวเอง how to <br>       
+                <p>
+            
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card ">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 id="product3"></h2>
+                <p class="product-price">฿300</p>
+                <p class="product-description">
+                    ศิลปะการโอบรับรักที่ใช่ Love Life <br>
+                    ผู้เขียน: แมทธิว ฮัสซีย์ (Matthew Hussey) <br>
+                    สำนักพิมพ์: Be(ing) (บีอิ้ง) <br>
+                    หมวดหมู่: จิตวิทยา การพัฒนาตัวเอง , การพัฒนาตัวเอง how to     
+                <p>
+            
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+        <div class="product-card ">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <h2 id="product4"></h2>
+                <p class="product-price">฿320</p>
+                <p class="product-description">
+                    กลยุทธ์ก้าวไปข้างหน้า พิมพ์ 2 <br>
+                    ผู้เขียน: เคอิจิ คายะ <br>
+                    สำนักพิมพ์: วารา <br>
+                    หมวดหมู่: จิตวิทยา การพัฒนาตัวเอง , การพัฒนาตัวเอง how to 
+                <p>
+            
+                <a href="#" class="product-button">เพิ่มลงตะกร้า</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
+styleslab2.css
+.container {
+    display: flex; 
+    gap: 15px; 
+}
+
+.product-card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 4px rgba(0,0,0,0.4);
+    background-color: white;
+
+}
+
+
+#product1 {
+    width: 270px;
+    height: 400px;
+    background-image: url('imges/product1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#product2 {
+    width: 270px;
+    height: 400px;
+    background-image: url('imges/product2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#product3 {
+    width: 270px;
+    height: 400px;
+    background-image: url('imges/product3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#product4 {
+    width: 270px;
+    height: 400px;
+    background-image: url('imges/product4.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: #007bff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-button {
+    display: block;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.product-button:hover {
+    background: linear-gradient(to right, #0056b3, #003980);
+}
 [วางโค้ดที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/62ae0fcd-00ff-4df7-920b-b8f9148d207c)
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-4-การจัดการขนาดและระยะห่าง)
