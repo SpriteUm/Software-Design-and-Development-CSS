@@ -658,11 +658,77 @@ border: 1px solid black;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleslab3.css">
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <div class="stat-number">3.7k</div>
+            <div class="stat-label">ผู้ใช้งาน</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">1.6K</div>
+            <div class="stat-label">ยอดขาย</div>
+        </div>
+        <div class="stat-box">
+            <div class="stat-number">50%</div>
+            <div class="stat-label">ความพึงพอใจ</div>
+        </div>
+    </div>
+</body>
+</html>
 [วางโค้ด HTML ที่นี่]
 ```
 ```css
+            .stats-container {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 7rem auto;
+            padding: 0 7rem;
+        }
+
+        .stat-box {
+            flex: 1;
+            margin: 0 15px;
+            padding: 2rem;
+            text-align: center;
+            background-color: rgba(117, 255, 232, 0.603);
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #015fc4;
+            margin-bottom: 2rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            
+        }
+
+        @media (max-width: 750px) {
+            .stats-container {
+                flex-direction: column;
+            }
+
+            .stat-box {
+                margin: 1rem 0;
+            }
+        }
 [วางโค้ด CSS ที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/113d86ab-1bdb-4ca8-a73b-065704b95092)
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-5-การจัดการข้อความและฟอนต์)
