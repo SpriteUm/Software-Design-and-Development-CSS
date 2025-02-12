@@ -1368,10 +1368,182 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Dashboard</h1>
+        
+            <nav>
+                <button id="pr1">โปรไฟล์</button>
+                <button id="pr2">ออกจากระบบ</button>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>หน้าแรก</li>
+                    <li>รายงาน</li>
+                    <li>การตั้งค่า</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>ยอดขายรวม</h3>
+                    <p>150,000 บาท</p>
+                </div>
+                <div class="stat-card">
+                    <h3>จำนวนออเดอร์</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ลูกค้าใหม่</h3>
+                    <p>45 คน</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart">
+                    <h3><img id="img1"src="/imges/graph_annual_report_2.jpg" alt="">กราฟแสดงยอดขาย</h3>
+                </div>
+                <div class="chart">
+                    <h3><img src="/imges/doc-rotate-pie-1.png" alt="">สัดส่วนสินค้าขายดี</h3>
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
 [วางโค้ด HTML ที่นี่]
 ```
 ```css
+    display: grid;
+    grid-template-areas: 
+        "sidebar header"
+        "sidebar main";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.66rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    padding: 2.0rem;
+    font-size: 1.66rem;
+    font-family: 'Sarabun', sans-serif;
+    border-radius: 8px;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 1rem;
+    background: #f5f7fa;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 4fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.66rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-family: 'Sarabun', sans-serif;
+}
+
+.chart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+
+.chart {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: 1.66rem;
+    font-weight: bold;
+    font-family: 'Sarabun', sans-serif;
+}
+
+#pr1 {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    margin-top: 1px;
+    border-radius: 4px;
+}
+
+#pr2 {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    margin-top: 1px;
+    border-radius: 4px;
+}
+
+#img1 {
+width: 1000px;
+height: 700px;
+background-image: url('/imges/graph_annual_report_2.jpg');
+background-size: cover;
+background-position: center;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-areas: 
+            "header"
+            "main";
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chart-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 [วางโค้ด CSS ที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/8049b8c0-ea49-43f6-9bed-395c30ed229f)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
