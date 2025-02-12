@@ -842,11 +842,110 @@ font-weight: bold;
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleslab4.css">
+</head>
+<body>
+    <article class="blog-post">
+        <header class="post-header">
+            <h1 class="post-title">รู้จักกับ “SDLC วงจรชีวิตซอฟต์แวร์ระยะพัฒนา” คืออะไร</h1>
+            <div class="post-meta">โพสต์เมื่อ 12 กุมภาพันธ์ 2025 | โดย นวพล สวัสดี</div>
+        </header>
+        
+        <div class="post-content">
+            <p>ในโลกของการพัฒนาซอฟต์แวร์ (Software Development) นั้นมีหลายเรื่องที่ต้องคำนึง ตั้งแต่ความต้องการผู้จ้าง (Requirement) ความซับซ้อนของระบบ จนถึงเรื่องความปลอดภัยของซอฟต์แวร์
+                โปรเจกต์พัฒนาซอฟต์แวร์จะสำเร็จได้ ไม่ได้ทำเพียงแค่การเขียนโค้ดเท่านั้น แต่ต้องเริ่มจากการวางแผน การออกแบบ การทดสอบ รวมถึงการบำรุงรักษาหลังจากที่ซอฟต์แวร์ถูกนำไปใช้งานจริงอีกด้วย
+                กระบวนการทั้งหมดนี้รวมเป็นสิ่งเดียว เรียกว่า Software Development Life Cycle หรือ SDLC บทความนี้จะพามารู้จักความหมาย และขั้นตอนทั้งหมดของ SDLC พร้อมทั้งสำรวจโมเดล (SDLC Model) ที่ใช้กับกระบวนการนี้กันครับ</p>
+
+            <h2>SDLC คืออะไร</h2>
+            <p>SDLC หรือ Software Development Life Cycle คือกระบวนการพื้นฐานที่ใช้ในการพัฒนาซอฟต์แวร์ ประกอบด้วยขั้นตอนต่าง ๆ ที่เป็นมาตรฐาน ตั้งแต่การวิเคราะห์ความต้องการ จนถึงการทดสอบและการบำรุงรักษา เพื่อให้แต่ละขั้นตอนมีชุดการส่งมอบที่จะป้อนในระยะต่อไป กระบวนการ SDLC นี้จะช่วยให้นักพัฒนาซอฟต์แวร์สามารถติดตามความคืบหน้า และจัดการกับปัญหาได้ง่ายมากขึ้น</p>
+
+            <blockquote>
+                "SDLC (Software Development Life Cycle)"
+            </blockquote>
+
+            <h2>ความสำคัญและประโยชน์ของ SDLC</h2>
+            <p>
+                <ul>
+                    <li>การมีกรอบการทำงานที่ชัดเจน ช่วยให้ทุกคนที่เกี่ยวข้องกับโปรเจกต์ ตั้งแต่ผู้จัดการโปรเจกต์ไปจนถึงนักพัฒนามีความเข้าใจตรงกัน และติดตามความคืบหน้าของโปรเจกต์ได้สะดวก</li> <br>
+                    <li>ประเมินความซับซ้อน ความเสี่ยง ต้นทุน และระยะเวลาที่ใช้พัฒนาซอฟต์แวร์ได้ ช่วยให้จัดการกับทรัพยากรได้อย่างมีประสิทธิภาพ</li> <br>
+                    <li>กระบวนการที่ชัดเจนยังช่วยในเรื่องบริหารความเสี่ยง เพื่อให้แน่ใจว่าคุณภาพของซอฟต์แวร์จะได้รับตรงตามทุก requirement</li> <br>
+                    <li>ผู้ใช้ได้มีส่วนร่วมและเข้าใจในแต่ละขั้นตอนการพัฒนา รับฟังความต้องการของผู้ใช้อย่างต่อเนื่อง ส่งผลให้เกิดความพึงพอใจที่เพิ่มขึ้น</li> <br>
+                    <li>ลำดับขั้นตอนพัฒนาที่ชัดเจน มีผลช่วยให้ส่งมอบซอฟต์แวร์ได้ทันตรงเวลา และมีคุณภาพตามที่คาดหวัง</li> <br>
+                </ul>
+            </p>
+            
+            <img src="/imges/SDLC-stages.png" alt="SDLC">
+        </div>
+    </article>
+</body>
+</html>
 [วางโค้ด HTML ที่นี่]
 ```
 ```css
+.blog-post {
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 1.8rem;
+    color: #004aac;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.post-content h2 {
+    font-size: 1.6rem;
+    color: #004aac;
+    margin: 2rem 0 1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #007bff;
+    margin: 1.5rem 0;
+    padding-left: 1rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .post-title {
+        font-size: 2rem;
+    }
+}
+
 [วางโค้ด CSS ที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/0b05795c-f99e-4093-a0c6-ae96151a0de5)
+![image](https://github.com/user-attachments/assets/42ecb982-882b-46cd-8aa7-21a342e8a9ff)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 [](#การทดลองที่-6-Layout-และการจัดวางอิลิเมนต์)
