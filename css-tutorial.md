@@ -1088,11 +1088,138 @@ blockquote {
 
 ### ผลการทดลอง
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styleslab5.css">
+</head>
+<body>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/imges/product1.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">ปรัชญาความสุขไม่มีวันหมดจากหมู่บ้านฯ</h3>
+                <div class="product-price">฿270</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/imges/product2.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">นิสัยของเศรษฐี พิมพ์ 2</h3>
+                <div class="product-price">฿300</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/imges/product3.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">นิสัยของเศรษฐี พิมพ์ 2</h3>
+                <div class="product-price">฿360</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image" style="background-image: url('/imges/product4.jpg')"></div>
+            <div class="product-details">
+                <h3 class="product-title">นิสัยของเศรษฐี พิมพ์ 2</h3>
+                <div class="product-price">฿160</div>
+                <div class="product-action">
+                    <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
 [วางโค้ด HTML ที่นี่]
 ```
 ```css
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover {
+    transform: translateY(10px);
+}
+
+.product-image {
+    width: 100%;
+    height: 400px;
+    background-color: #cacaca;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-details {
+    padding: 30px;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.product-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 [วางโค้ด CSS ที่นี่]
 ```
+![image](https://github.com/user-attachments/assets/86f8b0de-30b8-4a90-bebd-0b0fd4379df9)
+
 [บันทึกภาพหน้าจอของผลลัพธ์การทดลอง]
 
 
